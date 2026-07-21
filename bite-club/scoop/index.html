@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bite Club Scoop | Pre-Order Drop</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --border: #eaeaea;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3.5rem 1.25rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { color: var(--text); }
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.25rem 0;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    /* Access Gate */
+    #gate-container {
+      border: 1px solid var(--border);
+      background: #fafafa;
+      padding: 2.5rem;
+      border-radius: 8px;
+      max-width: 420px;
+      margin: 1.5rem 0;
+    }
+    .gate-title {
+      font-weight: 600;
+      margin: 0 0 0.25rem 0;
+    }
+    .gate-sub {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0 0 1.25rem 0;
+    }
+    .input-group {
+      display: flex;
+      gap: 0.5rem;
+    }
+    input[type="password"] {
+      flex: 1;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 1rem;
+      outline: none;
+    }
+    input[type="password"]:focus {
+      border-color: #111;
+    }
+    button {
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 0.65rem 1.25rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:hover { background: #333; }
+    .error-msg {
+      color: #d9534f;
+      font-size: 0.85rem;
+      margin: 0.5rem 0 0 0;
+      display: none;
+    }
+    /* Order Ref Banner & Form Wrapper */
+    #form-container {
+      display: none;
+      margin-top: 1.5rem;
+    }
+    .ref-banner {
+      background: #fafafa;
+      border: 1px solid var(--border);
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+    .ref-label {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+    .ref-code {
+      margin: 0.2rem 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text);
+    }
+    .ref-sub {
+      margin: 0;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    iframe {
+      width: 100%;
+      height: 1000px;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://pooja-s.com/" class="back-link">← Back to Home</a>
+  <h1>Bite Club Scoop 🍦</h1>
+  <p class="tagline">Intentionally crafted in small batches using pasture-raised local dairy, farm-fresh eggs, and seasonal ingredients.</p>
+
+  <!-- Access Gate -->
+  <div id="gate-container">
+    <p class="gate-title">Members Only</p>
+    <p class="gate-sub">Enter the passcode to view Drop #01 and place your order.</p>
+    
+    <form id="password-form" onsubmit="checkPassword(event)">
+      <div class="input-group">
+        <input type="password" id="passcode" placeholder="Passcode" required />
+        <button type="submit">Unlock</button>
+      </div>
+      <p id="error-message" class="error-msg">Incorrect passcode. Try again!</p>
+    </form>
+  </div>
+
+  <!-- Form Container -->
+  <div id="form-container">
+    
+    <!-- Order Reference Banner -->
+    <div class="ref-banner">
+      <p class="ref-label">Your Order Reference Number</p>
+      <p class="ref-code" id="order-ref-display">#BC-0000</p>
+      <p class="ref-sub">Please include this reference code in your Venmo/Zelle payment memo!</p>
+    </div>
+
+    <!-- Embedded Google Form -->
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfk89V3cWjRNkDSdH9USg8X0XNXHKiQT4gtoMSOzzl0xLuJgw/viewform?embedded=true" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">Loading menu…</iframe>
+  </div>
+
+  <script>
+    const SECRET_PASS = "icecream";
+
+    function checkPassword(event) {
+      event.preventDefault();
+      const input = document.getElementById('passcode').value;
+      const errorMsg = document.getElementById('error-message');
+      const gate = document.getElementById('gate-container');
+      const form = document.getElementById('form-container');
+
+      if (input.trim().toLowerCase() === SECRET_PASS.toLowerCase()) {
+        gate.style.display = 'none';
+        form.style.display = 'block';
+
+        let orderRef = sessionStorage.getItem('biteclub_order_id');
+        if (!orderRef) {
+          orderRef = '#BC-' + Math.floor(1000 + Math.random() * 9000);
+          sessionStorage.setItem('biteclub_order_id', orderRef);
+        }
+        document.getElementById('order-ref-display').innerText = orderRef;
+
+        sessionStorage.setItem('biteclub_unlocked', 'true');
+      } else {
+        errorMsg.style.display = 'block';
+      }
+    }
+// Set your passcode here:
+const SECRET_PASS = "unFIGgetable";
+    if (sessionStorage.getItem('biteclub_unlocked') === 'true') {
+      document.getElementById('gate-container').style.display = 'none';
+      document.getElementById('form-container').style.display = 'block';
+      
+      let orderRef = sessionStorage.getItem('biteclub_order_id');
+      if (!orderRef) {
+        orderRef = '#BC-' + Math.floor(1000 + Math.random() * 9000);
+        sessionStorage.setItem('biteclub_order_id', orderRef);
+      }
+      document.getElementById('order-ref-display').innerText = orderRef;
+    }
+  </script>
+
+</body>
+</html>
