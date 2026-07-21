@@ -91,37 +91,10 @@
       margin: 0.5rem 0 0 0;
       display: none;
     }
-    /* Order Ref Banner & Form Wrapper */
+    /* Form Wrapper */
     #form-container {
       display: none;
       margin-top: 1.5rem;
-    }
-    .ref-banner {
-      background: #fafafa;
-      border: 1px solid var(--border);
-      padding: 1.25rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-    }
-    .ref-label {
-      margin: 0;
-      font-size: 0.85rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-    }
-    .ref-code {
-      margin: 0.2rem 0;
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      color: var(--text);
-    }
-    .ref-sub {
-      margin: 0;
-      font-size: 0.85rem;
-      color: var(--muted);
     }
     iframe {
       width: 100%;
@@ -153,15 +126,6 @@
 
   <!-- Form Container -->
   <div id="form-container">
-    
-    <!-- Order Reference Banner -->
-    <div class="ref-banner">
-      <p class="ref-label">Your Order Reference Number</p>
-      <p class="ref-code" id="order-ref-display">#BC-0000</p>
-      <p class="ref-sub">Please include this reference code in your Venmo/Zelle payment memo!</p>
-    </div>
-
-    <!-- Embedded Google Form -->
     <iframe 
       src="https://docs.google.com/forms/d/e/1FAIpQLSfk89V3cWjRNkDSdH9USg8X0XNXHKiQT4gtoMSOzzl0xLuJgw/viewform?embedded=true" 
       frameborder="0" 
@@ -170,6 +134,7 @@
   </div>
 
   <script>
+    // Set your passcode here:
     const SECRET_PASS = "unFIGgetable";
 
     function checkPassword(event) {
@@ -182,14 +147,6 @@
       if (input.trim().toLowerCase() === SECRET_PASS.toLowerCase()) {
         gate.style.display = 'none';
         form.style.display = 'block';
-
-        let orderRef = sessionStorage.getItem('biteclub_order_id');
-        if (!orderRef) {
-          orderRef = '#BC-' + Math.floor(1000 + Math.random() * 9000);
-          sessionStorage.setItem('biteclub_order_id', orderRef);
-        }
-        document.getElementById('order-ref-display').innerText = orderRef;
-
         sessionStorage.setItem('biteclub_unlocked', 'true');
       } else {
         errorMsg.style.display = 'block';
@@ -199,13 +156,6 @@
     if (sessionStorage.getItem('biteclub_unlocked') === 'true') {
       document.getElementById('gate-container').style.display = 'none';
       document.getElementById('form-container').style.display = 'block';
-      
-      let orderRef = sessionStorage.getItem('biteclub_order_id');
-      if (!orderRef) {
-        orderRef = '#BC-' + Math.floor(1000 + Math.random() * 9000);
-        sessionStorage.setItem('biteclub_order_id', orderRef);
-      }
-      document.getElementById('order-ref-display').innerText = orderRef;
     }
   </script>
 
