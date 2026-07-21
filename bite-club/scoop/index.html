@@ -40,61 +40,7 @@
     .tagline {
       color: var(--muted);
       font-size: 1rem;
-      margin-bottom: 2.5rem;
-    }
-    /* Access Gate */
-    #gate-container {
-      border: 1px solid var(--border);
-      background: #fafafa;
-      padding: 2.5rem;
-      border-radius: 8px;
-      max-width: 420px;
-      margin: 1.5rem 0;
-    }
-    .gate-title {
-      font-weight: 600;
-      margin: 0 0 0.25rem 0;
-    }
-    .gate-sub {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin: 0 0 1.25rem 0;
-    }
-    .input-group {
-      display: flex;
-      gap: 0.5rem;
-    }
-    input[type="password"] {
-      flex: 1;
-      padding: 0.65rem 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-size: 1rem;
-      outline: none;
-    }
-    input[type="password"]:focus {
-      border-color: #111;
-    }
-    button {
-      background: #111;
-      color: #fff;
-      border: none;
-      padding: 0.65rem 1.25rem;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    button:hover { background: #333; }
-    .error-msg {
-      color: #d9534f;
-      font-size: 0.85rem;
-      margin: 0.5rem 0 0 0;
-      display: none;
-    }
-    /* Form Wrapper */
-    #form-container {
-      display: none;
-      margin-top: 1.5rem;
+      margin-bottom: 2rem;
     }
     iframe {
       width: 100%;
@@ -110,54 +56,12 @@
   <h1>Bite Club Scoop 🍦</h1>
   <p class="tagline">Intentionally crafted in small batches using pasture-raised local dairy, farm-fresh eggs, and seasonal ingredients.</p>
 
-  <!-- Access Gate -->
-  <div id="gate-container">
-    <p class="gate-title">Members Only</p>
-    <p class="gate-sub">Enter the passcode to view Drop #01 and place your order.</p>
-    
-    <form id="password-form" onsubmit="checkPassword(event)">
-      <div class="input-group">
-        <input type="password" id="passcode" placeholder="Passcode" required />
-        <button type="submit">Unlock</button>
-      </div>
-      <p id="error-message" class="error-msg">Incorrect passcode. Try again.</p>
-    </form>
-  </div>
-
-  <!-- Form Container -->
-  <div id="form-container">
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfk89V3cWjRNkDSdH9USg8X0XNXHKiQT4gtoMSOzzl0xLuJgw/viewform?embedded=true" 
-      frameborder="0" 
-      marginheight="0" 
-      marginwidth="0">Loading menu…</iframe>
-  </div>
-
-  <script>
-    // Set your passcode here:
-    const SECRET_PASS = "unFIGettable";
-
-    function checkPassword(event) {
-      event.preventDefault();
-      const input = document.getElementById('passcode').value;
-      const errorMsg = document.getElementById('error-message');
-      const gate = document.getElementById('gate-container');
-      const form = document.getElementById('form-container');
-
-      if (input.trim().toLowerCase() === SECRET_PASS.toLowerCase()) {
-        gate.style.display = 'none';
-        form.style.display = 'block';
-        sessionStorage.setItem('biteclub_unlocked', 'true');
-      } else {
-        errorMsg.style.display = 'block';
-      }
-    }
-
-    if (sessionStorage.getItem('biteclub_unlocked') === 'true') {
-      document.getElementById('gate-container').style.display = 'none';
-      document.getElementById('form-container').style.display = 'block';
-    }
-  </script>
+  <!-- Google Form embedded directly -->
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLSfk89V3cWjRNkDSdH9USg8X0XNXHKiQT4gtoMSOzzl0xLuJgw/viewform?embedded=true" 
+    frameborder="0" 
+    marginheight="0" 
+    marginwidth="0">Loading menu…</iframe>
 
 </body>
 </html>
