@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pooja S | Strategy, Partnerships & Behavioral Design</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #666666;
+      --border: #eaeaea;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3.5rem 1.25rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    header { margin-bottom: 3rem; }
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.25rem 0;
+    }
+    .tagline {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+    .bio-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 3.5rem 0;
+    }
+    .bio-bullets li {
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+      color: #1a1a1a;
+      line-height: 1.55;
+    }
+    .bio-bullets strong {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: #f1f1f1;
+      color: #333;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin: 3.5rem 0 1.5rem 0;
+      letter-spacing: -0.01em;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+    .project-card {
+      border: 1px solid var(--border);
+      padding: 1.35rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: inherit;
+      background: #fafafa;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card:hover {
+      border-color: #111;
+      background: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .project-card h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .writing-list, .media-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .writing-list li { margin-bottom: 1.25rem; }
+    .writing-list a {
+      font-weight: 600;
+      color: #111;
+      text-decoration: none;
+      font-size: 1.05rem;
+    }
+    .writing-list a:hover { text-decoration: underline; }
+    .writing-list p {
+      margin: 0.2rem 0 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .media-list li {
+      margin-bottom: 0.6rem;
+      font-size: 0.98rem;
+      color: #333;
+    }
+    .media-list span { color: var(--muted); }
+    @media (max-width: 550px) {
+      .project-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pooja S</h1>
+    <p class="tagline">Connecting Brands and Products with People</p>
+  </header>
+
+  <ul class="bio-bullets">
+    <li><strong>WHAT I DO</strong> From early conviction to real-world impact, I work at the intersection of strategy, systems, and human behavior to build experiences and organizations that last. I’m a strategic operator and builder shaping and scaling programs, partnerships, and platforms. I lead through clarity, trust, and design — aligning diverse stakeholders, building durable operating systems, and translating vision into execution.</li>
+    <li><strong>HOW I DO IT DIFFERENTLY</strong> I observe how people navigate choice and incentives, understand how values drive action to move the needle, and design end-to-end experiences that turn behavioral insight into scalable, measurable growth. Throughout my career, I have been driven by three key passions: building high-performing teams, building communities that foster high-trust connections, and designing experiences that deliver lasting value to both consumers and businesses.</li>
+    <li><strong>BUILDING</strong> Currently building a hospitality and wellness concept in stealth mode, centered around intentional guest experiences.</li>
+  </ul>
+
+  <h2 class="section-title">Projects I've Worked On</h2>
+  <div class="project-grid">
+    <a href="case-study-sedentary-lifestyle.html" class="project-card">
+      <div>
+        <h3>Promoting Physical Activity Among Sedentary Patients</h3>
+        <p>A behavioral science intervention using wearable technology and tailored motivation design.</p>
+      </div>
+    </a>
+    <a href="case-study-fintech-savings.html" class="project-card">
+      <div>
+        <h3>Driving Savings for a Fintech App</h3>
+        <p>Overcoming present bias and low savings rates through personalized goal architecture.</p>
+      </div>
+    </a>
+    <a href="case-study-vitamin-d.html" class="project-card">
+      <div>
+        <h3>Enhancing Vitamin D Adherence</h3>
+        <p>Improving routine medication adherence using interactive tracking and structured feedback.</p>
+      </div>
+    </a>
+  </div>
+
+  <h2 class="section-title">Things I Wrote</h2>
+  <ul class="writing-list">
+    <li>
+      <a href="blog-user-feedback.html">Behavioral Science Series: On User Feedback</a>
+      <p>A deep dive into cognitive load, question ordering, anchoring effects, and closing the intention-action gap.</p>
+    </li>
+    <li>
+      <a href="blog-storytelling.html">Effective Leaders Are Great Storytellers</a>
+      <p>How leaders use origin, failure, and culture stories to build authentic trust and brain synchronization.</p>
+    </li>
+    <li>
+      <a href="blog-storytelling-101.html">How to: Get Customers to Get Your Brand (Storytelling 101)</a>
+      <p>The neuroscience of brand perception, mirror neurons, and emotional memory creation.</p>
+    </li>
+    <li>
+      <a href="blog-how-to-sell-more.html">How to: Sell More (The Surprising Factor That Drives Revenue)</a>
+      <p>Why emotion—not pure logic—drives decision-making, consumer loyalty, and revenue growth.</p>
+    </li>
+    <li>
+      <a href="blog-dtc-scale.html">How DTC Brands Go From 0 to Scale</a>
+      <p>Deconstructing the customer experience formula behind digitally native growth successes.</p>
+    </li>
+    <li>
+      <a href="blog-startup-goals.html">Marketing at a Startup: Setting Goals</a>
+      <p>Defining success, leveraging OKRs, and structuring customer-centric metrics for sustainable growth.</p>
+    </li>
+    <li>
+      <a href="blog-startup-first-90-days.html">Marketing at a Startup: What Do You Do First?</a>
+      <p>A 90-day playbook for new marketing leaders on building trust, establishing credibility, and driving cross-functional alignment.</p>
+    </li>
+    <li>
+      <a href="blog-okrs-growth-marketing.html">OKRs for Growth and Marketing</a>
+      <p>A strategic framework for aligning organizational focus, driving execution, and measuring what matters.</p>
+    </li>
+  </ul>
+
+  <h2 class="section-title">Books I Love</h2>
+  <ul class="media-list">
+    <li><strong>High Output Management</strong> <span>— Andrew Grove</span></li>
+    <li><strong>The Hard Thing About Hard Things</strong> <span>— Ben Horowitz</span></li>
+    <li><strong>Obviously Awesome</strong> <span>— April Dunford</span></li>
+    <li><strong>Scaling People</strong> <span>— Claire Hughes Johnson</span></li>
+    <li><strong>Setting the Table</strong> <span>— Danny Meyer</span></li>
+    <li><strong>Unreasonable Hospitality</strong> <span>— Will Guidara</span></li>
+    <li><strong>Thinking, Fast and Slow</strong> <span>— Daniel Kahneman</span></li>
+    <li><strong>Power: Why Some People Have It—and Others Don't</strong> <span>— Jeffrey Pfeffer</span></li>
+    <li><strong>Essentialism: The Disciplined Pursuit of Less</strong> <span>— Greg McKeown</span></li>
+    <li><strong>The Hidden Life of Trees</strong> <span>— Peter Wohlleben</span></li>
+    <li><strong>Radical Candor</strong> <span>— Kim Scott</span></li>
+  </ul>
+
+  <h2 class="section-title">Podcasts I Love</h2>
+  <ul class="media-list">
+    <li><strong>Choiceology</strong> <span>— Hosted by Katy Milkman</span></li>
+    <li><strong>Hidden Brain</strong> <span>— Hosted by Shankar Vedantam</span></li>
+    <li><strong>Lenny's Podcast</strong> <span>— Hosted by Lenny Rachitsky</span></li>
+    <li><strong>Invisibilia</strong> <span>— NPR</span></li>
+    <li><strong>Acquired</strong> <span>— Hosted by Ben Gilbert and David Rosenthal</span></li>
+    <li><strong>How To Save A Planet</strong> <span>— Spotify / Gimlet</span></li>
+    <li><strong>Think Fast, Talk Smart</strong> <span>— Stanford Graduate School of Business</span></li>
+    <li><strong>Pfeffer on Power</strong> <span>— Hosted by Jeffrey Pfeffer</span></li>
+  </ul>
+
+</body>
+</html>
