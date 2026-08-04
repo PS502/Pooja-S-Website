@@ -1,0 +1,118 @@
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">How to Build a Startup</h1>
+  </header>
+
+  <div class="post-content">
+    <p class="lead">
+      Most startups don't fail because they can't build a product. They fail because they build something people don't want, try to sell it to people who don't care, and spend a lot of money doing both at the same time.
+    </p>
+
+    <p>
+      Founders like to think of "0 to 1" as a single, dramatic leap. You sit in a room, you write code, you launch on Product Hunt, and suddenly you have a company. But that’s almost never how it actually works.
+    </p>
+
+    <p>
+      If you look at the startups that survive, 0 to 1 isn't a single jump. It's a sequence of six very specific problems you have to solve in order. If you try to solve step six when you’re still stuck on step two, you die.
+    </p>
+
+    <hr />
+
+    <ol class="startup-steps">
+      <li>
+        <h2>1. The Direct Wedge</h2>
+        <p>
+          When you're starting out, you can't market to "everyone." In fact, if you try to market to a thousand people, you'll probably reach zero.
+        </p>
+        <p>
+          You have to find ten people who have a problem so painful that they will use a broken, ugly, incomplete version of your software just to make the pain stop. And you shouldn't run ads to find them. You should go find them manually, talk to them, and hand-pick them.
+        </p>
+        <p>
+          If you can't convince ten people to try your product by talking to them directly, you certainly won't convince ten thousand with Facebook ads.
+        </p>
+      </li>
+
+      <li>
+        <h2>2. Viral Diffusion</h2>
+        <p>
+          The best distribution doesn't feel like marketing; it feels like using the product.
+        </p>
+        <p>
+          When you send someone a Figma link, you aren't trying to market Figma to them. You're just trying to get work done. But in the process of opening that link, the other person realizes Figma exists.
+        </p>
+        <p>
+          If your product gets better or more useful when your users share it with other people, distribution becomes a natural side effect of usage. If it doesn't, you're going to have to pay for every single user you ever get.
+        </p>
+      </li>
+
+      <li>
+        <h2>3. Fast Activation</h2>
+        <p>
+          Most software makes you feel stupid before it makes you feel smart.
+        </p>
+        <p>
+          You sign up, you verify your email, you fill out ten profile fields, you invite your team, and by the time you actually get to the core feature, you've forgotten why you wanted to use it in the first place.
+        </p>
+        <p>
+          Your job early on is to remove every single piece of friction between the moment someone signs up and the moment they say, "Oh, wow." If that doesn't happen in the first sixty seconds, most people will just close the tab and never come back.
+        </p>
+      </li>
+
+      <li>
+        <h2>4. Cohort Retention</h2>
+        <p>
+          This is the only metric that truly matters in the beginning.
+        </p>
+        <p>
+          Imagine a bucket with a hole in the bottom. If you pour water into the bucket, it fills up for a minute. If you pour faster, it looks like you're growing. But eventually, your arm gets tired, the water stops, and the bucket empties out.
+        </p>
+        <p>
+          Growth capital spent on a leaky product is just expensive noise. You know you have something real when your retention curve flattens out—when a small group of users signs up, stays, and refuses to leave, even when you stop trying to acquire new ones.
+        </p>
+      </li>
+
+      <li>
+        <h2>5. Value Pricing</h2>
+        <p>
+          Pricing isn't an accounting problem; it's a psychology problem.
+        </p>
+        <p>
+          If you charge per seat, people will share passwords to avoid paying you. If you charge a massive upfront fee, nobody will risk trying you.
+        </p>
+        <p>
+          The best pricing models are aligned with the value the customer gets. If your software saves someone $10,000, charging them $1,000 feels cheap. If your software saves them nothing, charging $10 feels like a rip-off. Make it absurdly easy for a buyer to say yes because the math is obvious.
+        </p>
+      </li>
+
+      <li>
+        <h2>6. The Expansion Engine</h2>
+        <p>
+          In the beginning, you do things that don't scale. You personally onboard users, you write manual custom scripts, and you handle support calls at 2 AM.
+        </p>
+        <p>
+          Scale happens when the system takes over. Instead of hiring ten sales reps to sign up ten companies, you build a product where one employee adopts it, three colleagues join them, and IT buys an enterprise plan six months later just to get single sign-on.
+        </p>
+        <p>
+          When your revenue grows faster than your headcount, you don't just have a product anymore. You have a business.
+        </p>
+      </li>
+    </ol>
+
+    <hr />
+
+    <h2>The Real Lesson</h2>
+    <p>
+      You can't skip steps in startup physics.
+    </p>
+    <p>
+      If you try to build an expansion engine before you fix retention, you're just scaling a broken product. If you try to run a viral loop on a product nobody activates, you're just spamming people.
+    </p>
+    <p>
+      Don’t scale the company you hope to have. Fix the constraints of the company you actually run.
+    </p>
+
+    <blockquote>
+      <p>Scale reality, not wishful thinking.</p>
+    </blockquote>
+  </div>
+</article>
