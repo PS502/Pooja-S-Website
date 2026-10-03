@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why Your Best Hires Turn Passive in 6 Months (And How to Fix It)</title>
+  <title>Why Your Best Hires Turn Passive in 6 Months</title>
   <style>
     :root {
       --bg: #ffffff;
       --text: #1a1a1a;
       --text-muted: #666666;
-      --accent: #2563eb;
       --border: #e5e7eb;
       --card-bg: #f9fafb;
       --quote-border: #111827;
       --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
     }
 
     * {
@@ -38,10 +36,17 @@
       margin: 0 auto;
     }
 
-    header {
-      margin-bottom: 3.5rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 2rem;
+    .back-link {
+      display: inline-block;
+      margin-bottom: 2rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.15s ease;
+    }
+
+    .back-link:hover {
+      color: var(--text);
     }
 
     h1 {
@@ -49,28 +54,20 @@
       line-height: 1.2;
       font-weight: 800;
       letter-spacing: -0.03em;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
       color: #111827;
     }
 
-    .meta {
-      font-size: 0.95rem;
+    .subtitle {
+      font-size: 1.2rem;
+      line-height: 1.5;
       color: var(--text-muted);
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .lead {
-      font-size: 1.25rem;
-      line-height: 1.6;
-      color: #374151;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       font-weight: 400;
     }
 
     h2 {
-      font-size: 1.65rem;
+      font-size: 1.5rem;
       line-height: 1.3;
       font-weight: 700;
       letter-spacing: -0.02em;
@@ -82,6 +79,19 @@
       margin-bottom: 1.5rem;
       font-size: 1.05rem;
       color: #27272a;
+    }
+
+    pre.ascii-box {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.85rem;
+      line-height: 1.35;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.25rem;
+      margin: 2rem 0;
+      overflow-x: auto;
+      color: #111827;
     }
 
     blockquote {
@@ -146,22 +156,43 @@
 <body>
 
 <article>
-  <header>
-    <h1>Why Your Best Hires Turn Passive in 6 Months (And How to Fix It)</h1>
-    <div class="meta">
-      <span>High-Agency Operating Models</span>
-      <span>•</span>
-      <span>10 min read</span>
-    </div>
-  </header>
+  <a href="../index.html" class="back-link">← Back to Home</a>
 
-  <p class="lead">Every founder and operator knows the feeling. You hunt down an exceptional candidate: sharp, entrepreneurial, autonomous. In their interviews, they point to messy, ambiguous zero-to-one bets they built from scratch. You hire them expecting high-velocity impact.</p>
+  <h1>Why Your Best Hires Turn Passive in 6 Months</h1>
+  <p class="subtitle">Why modern organizations accidentally breed passivity, and the 4-part operating model that unlocks high agency outside of engineering.</p>
 
-  <p>Six months later, they’re waiting for sign-offs. They don’t pick up dropped balls. They’ve slipped into a holding pattern, executing only within the narrow confines of their job description.</p>
+  <p>Let’s be honest about an uncomfortable pattern in growth-stage companies.</p>
 
-  <p>The standard management reaction is to blame the hiring filter: <em>"We misread their agency,"</em> or <em>"They can only operate with playbooks."</em></p>
+  <p>You spend months hunting down a "high-agency operator." You look for the former founder, the scrappy growth marketer, the sharp BizOps generalist who supposedly moves mountains. You pay top of market. You bring them on board and tell them: <em>"Treat this like your own company."</em></p>
 
-  <p>That diagnosis is almost always wrong. Passivity is rarely an inherent character flaw; it is an engineered systemic outcome. High-agency people do not lose their drive—they adapt to the structural incentives, social frictions, and feedback loops of the environment you put them in.</p>
+  <p>Then, month six rolls around.</p>
+
+  <p>That same operator is sitting silently on a 14-person cross-functional "alignment" sync. They wait for someone else to build the Notion agenda. When a key partnership stalls or an enterprise rollout drags, they don’t kick down doors to fix it—they write a polished 5-page memo detailing which external dependency slipped.</p>
+
+  <p>They stopped taking swings. They started playing defense.</p>
+
+  <p>I see founders make the same two mistakes every single time:</p>
+  <ol>
+    <li>They blame the talent: <em>"We need hungrier people."</em></li>
+    <li>They add bureaucratic scaffolding: <em>"We need tighter OKRs and another weekly pipeline sync."</em></li>
+  </ol>
+
+  <p>Both are dead wrong.</p>
+
+  <p>You didn't hire the wrong person. Your operating environment did exactly what it was designed to do: it trained them into compliance.</p>
+
+<pre class="ascii-box">
++-------------------------------------------------------------+
+|                THE SIX-MONTH DRIFT CYCLE                    |
++-------------------------------------------------------------+
+| Day 1:   High Agency  --> Takes risks & seeks direct impact |
+| Month 2: Bureaucracy  --> Navigates consensus & approvals   |
+| Month 4: Defense      --> Focuses on downside protection    |
+| Month 6: Passivity    --> Complies with the system rubric   |
++-------------------------------------------------------------+
+</pre>
+
+  <p>Passivity is rarely an inherent character flaw; it is an engineered systemic outcome. High-agency people do not lose their drive—they adapt to the structural incentives, social frictions, and feedback loops of the environment you put them in.</p>
 
   <p>If your best hires have turned passive, your operating environment is systematically disincentivizing ownership. Here is the behavioral architecture behind why it happens, and how top operators reverse it across five foundational pillars.</p>
 
@@ -169,7 +200,7 @@
 
   <h2>1. Close the Beneficiary Gap (Adam Grant)</h2>
 
-  <p>When high-agency operators lose their edge, the root cause is rarely burnout—it’s insulation. In growing startups, rapid scaling introduces organizational layers designed to shield builders from operational chaos. But in doing so, companies inadvertently sever the emotional telephone line between the person doing the work and the human suffering on the other end.</p>
+  <p>In traditional corporate hierarchies, work is routed through layers of translation: executive sponsor to VP, VP to director, director to product manager, product manager to engineer or designer.</p>
 
   <p>By the time the work lands on an individual contributor's desk, it has been stripped of every trace of humanity. It is reduced to a Jira ticket, a brief, or a Slack message.</p>
 
@@ -193,7 +224,7 @@
 
   <h2>2. Replace Unstructured Autonomy with a Purpose Hierarchy (Angela Duckworth)</h2>
 
-  <p>Unstructured autonomy almost always falls flat. Whenever an org says, <em>"Take 20% of your time to go build whatever you want,"</em> most people end up tinkering with trivial side experiments or get completely stuck staring at a blank page—which is why even at Google, only ~10% of people ever actively used it.</p>
+  <p>Whenever an org says, 'Take 20% of your time to go build whatever you want,' most people end up tinkering with trivial side experiments or get completely stuck staring at a blank page—which is why even at Google, only ~10% of people ever actively used it.</p>
 
   <p>Angela Duckworth’s foundational work on grit at Penn explains why: genuine persistence isn't aimless passion. Grit is curiosity anchored in an explicit purpose hierarchy -- the deliberate intent to solve a high-stakes problem for someone else. Autonomy without strategic boundaries breeds drift, not velocity.</p>
 
@@ -242,7 +273,7 @@
     <li><strong>Artificial politeness:</strong> A culture of uncritical consensus where mediocre ideas pass without rigorous interrogation because no one wants to step on toes.</li>
   </ul>
 
-  <p>Neither environment produces excellence. Philip Tetlock and Adam Grant emphasize that top performers depend on a <strong>Challenge Network</strong>: a group of trusted peers who offer radical candor within an environment of absolute psychological safety.</p>
+  <p>Neither environment produces excellence. Philip Tetlock and Adam Grant emphasize that top performers depend on a Challenge Network: a group of trusted peers who offer radical candor within an environment of absolute psychological safety.</p>
 
   <p>In a great challenge network, pushback isn't seen as an attack on your competence. It’s treated as an essential stress test - poking holes in the idea with peers before the real world does it for you.</p>
 
@@ -262,22 +293,20 @@
 
   <h2>5. Shift the Blast Radius: Reinforce Outcomes, Not Plan Compliance (B.F. Skinner)</h2>
 
-  <p>What an organization rewards defines how its people actually behave—not whatever values are painted on the office wall.</p>
+  <p>What gets reinforced gets repeated. B.F. Skinner’s foundational work on behavioral conditioning proved that the schedule and nature of reinforcement dictate habit formation. In standard corporate environments, the reinforcement structure is asymmetric: deliver a mediocre project on time, and you are rewarded with a strong rating; take a calculated risk on a high-upside initiative that fails, and you face informal social punishment or stalled career progression.</p>
 
-  <p>B.F. Skinner’s foundational work on reinforcement schedules showed that behavior is an exact function of its consequences. If you want people to take massive swings, you can't just reward compliance with a safe quarterly plan. In most companies, a mediocre project delivered safely on time gets an "Exceeds Expectations" rating, while an ambitious, high-upside initiative that ran into an unexpected wall gets a quiet reprimand.</p>
-
-  <p>Operators quickly learn the real game: play it safe, protect downside, and never touch anything that could explode. If you punish smart failures, you aren’t running an innovation culture—you're running a risk-mitigation bureaucracy.</p>
+  <p>When the penalty for failure exceeds the reward for outsized success, rational operators stop taking initiative. They optimize for zero mistakes rather than maximum impact.</p>
 
   <blockquote>
-    <p><strong>W.L. Gore’s Dead-Project Celebrations & DoorDash’s Zero-Failure Penalty</strong></p>
-    <p>At W.L. Gore, when a team realizes a bold initiative has hit a dead end and decides to kill it, they don't hide the outcome. The company pops champagne and throws a party. Recognizing that an idea didn't work and pulling the plug early is celebrated because it liberates the company’s most valuable resource: high-agency talent.</p>
-    <p>DoorDash takes a complementary operational approach. In performance reviews, leaders look for high-conviction bets that failed within a contained blast radius. If an operator has a 100% success rate on their quarterly goals, it isn't celebrated as perfection; it’s flagged as evidence that they played defense and took zero ambitious swings.</p>
+    <p><strong>Tata’s "Dare to Try" & Supercell’s Champagne Post-Mortems</strong></p>
+    <p>Tata Group instituted the "Dare to Try" award, celebrating operational and business failures that represented intelligent, well-executed risks. The award removed the social stigma of failure across a massive conglomerate.</p>
+    <p>Supercell famously celebrates cancelled games by popping champagne with the entire studio. When a game team realizes a title will not become a top-tier hit, they kill the project and share their learnings openly. Recognizing failure quickly is treated as a strategic win, redirecting top engineering and design talent to the next high-potential opportunity.</p>
   </blockquote>
 
   <span class="translation-header">The Workplace Translation</span>
   <ul>
-    <li><strong>Reward the swing, not just the hit.</strong> If someone runs a smart, rigorous experiment that fails, celebrate the speed of learning and the discipline to pull the plug. If the only people getting promoted are the ones who hit safe, sandbagged targets, your best operators will stop taking risks.</li>
-    <li><strong>Audit for the "Safe 100%."</strong> In performance reviews, treat a spotless track record with suspicion. If an operator didn't fail at anything over the last twelve months, call it what it is: they aimed too low.</li>
+    <li><strong>Evaluate decision quality independently from outcome.</strong> In post-mortems and performance cycles, assess whether the operator gathered the right data, executed with velocity, and managed the downside—not merely whether the variance swung in their favor.</li>
+    <li><strong>Decouple failure from political standing.</strong> Establish formal forums to review killed projects, extract systemic insights, and redeploy talent to critical frontiers without penalty.</li>
   </ul>
 
   <hr>
