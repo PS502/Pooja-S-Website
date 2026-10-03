@@ -11,7 +11,6 @@
       --muted: #666666;
       --border: #eaeaea;
       --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
     * { box-sizing: border-box; }
     body {
@@ -98,32 +97,41 @@
       color: var(--text);
     }
     tr:last-child td { border-bottom: none; }
-    pre {
-      background: #fafafa;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.2rem;
-      margin: 1.75rem 0;
-      overflow-x: auto;
-      font-family: var(--font-mono);
-      font-size: 0.88rem;
-      line-height: 1.5;
-      color: #222;
-    }
-    code {
-      font-family: var(--font-mono);
-      font-size: 0.9em;
-    }
     .callout {
       background: #fafafa;
       border: 1px solid var(--border);
       border-radius: 6px;
       padding: 1.25rem;
-      margin: 1.5rem 0;
+      margin: 1.75rem 0;
+      font-size: 0.95rem;
     }
-    .callout strong {
+    .callout strong.callout-title {
       display: block;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+      font-size: 0.98rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+    .callout p {
+      margin-bottom: 0.75rem;
+    }
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+    .callout ol, .callout ul {
+      margin-bottom: 0.5rem;
+    }
+    .flow-step {
+      display: flex;
+      align-items: center;
+      margin: 0.35rem 0;
+      font-weight: 500;
+    }
+    .flow-arrow {
+      color: var(--muted);
+      margin: 0.2rem 0 0.2rem 1.25rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
@@ -154,21 +162,18 @@
 
   <p>You didn't hire the wrong person. Your operating environment did exactly what it was designed to do: it trained them into compliance.</p>
 
-<pre><code>   THE DOWNWARD COMPLIANCE SPIRAL
-   
-   High-Agency Operator Joins
-              │
-              ▼
-   Trapped in Multi-Tier "Alignment" & Approval Loops
-              │
-              ▼
-   Learns: Downside Protection &gt; Bold Autonomous Swings
-              │
-              ▼
-   Becomes a Passive Slide-Builder
-              │
-              ▼
-   Leadership Panics → Adds More Process & Governance Syncs</code></pre>
+  <div class="callout">
+    <strong class="callout-title">The Downward Compliance Spiral</strong>
+    <div class="flow-step">1. High-Agency Operator Joins</div>
+    <div class="flow-arrow">&darr;</div>
+    <div class="flow-step">2. Trapped in Multi-Tier "Alignment" & Approval Loops</div>
+    <div class="flow-arrow">&darr;</div>
+    <div class="flow-step">3. Learns: Downside Protection &gt; Bold Autonomous Swings</div>
+    <div class="flow-arrow">&darr;</div>
+    <div class="flow-step">4. Becomes a Passive Slide-Builder</div>
+    <div class="flow-arrow">&darr;</div>
+    <div class="flow-step">5. Leadership Panics &rarr; Adds More Process & Governance Syncs</div>
+  </div>
 
   <p>Over the past two years at Wharton—working closely with high schoolers launching real ventures in Global Youth, full-time MBAs spending a semester embedded in the San Francisco tech ecosystem, and battle-tested senior leaders in the Executive MBA program—I watched this exact dynamic play out across hundreds of operators at every career stage.</p>
 
@@ -231,7 +236,10 @@
   <h2>1. Close the Beneficiary Gap: Put Operators in the Blast Radius</h2>
   <p>In most business teams, market reality is filtered through an absurd corporate game of telephone:</p>
 
-<pre><code>Customer Pain ──► Support Escalation ──► Research Deck ──► VP Strategy ──► GTM Lead</code></pre>
+  <div class="callout">
+    <strong class="callout-title">The Sterilization Pipeline</strong>
+    <p>Customer Pain &rarr; Support Escalation &rarr; Research Deck &rarr; VP Strategy &rarr; GTM Lead</p>
+  </div>
 
   <p>By the time a growth strategist, marketer, or BizOps lead touches the project, every trace of human urgency has been sterilized. It’s an abstract bullet point in a deck: <em>"Onboarding drop-off in Mid-Market."</em></p>
 
@@ -243,16 +251,16 @@
 
   <p>Nobody works late on a Thursday to help an executive hit a quarterly deck target by 1.2%. But marketers, legal teams, and finance ops will move mountains to fix a broken experience for a human being whose face and frustration they saw that morning.</p>
 
-<pre><code>BAD (Sterilized Proxy):
-"Marketers review a 40-page quarterly survey deck summarizing user drop-off."
-└── Outcome: Passive discussions, zero urgency, academic optimizations.
-
-GOOD (Raw Friction):
-"Marketers sit in on 2 unscripted churn calls a month. No slide decks allowed."
-└── Outcome: Visceral customer empathy, aggressive repositioning, immediate GTM fixes.</code></pre>
+  <div class="callout">
+    <strong class="callout-title">Sterilized Proxy vs. Raw Friction</strong>
+    <p><strong>The Proxy Approach:</strong> Marketers review a 40-page quarterly survey deck summarizing user drop-off.<br>
+    <em>Outcome:</em> Passive discussions, zero urgency, academic optimizations.</p>
+    <p><strong>The Raw Friction Approach:</strong> Marketers sit in on 2 unscripted churn calls a month. No slide decks allowed.<br>
+    <em>Outcome:</em> Visceral customer empathy, aggressive repositioning, immediate GTM fixes.</p>
+  </div>
 
   <div class="callout">
-    <strong>The Operator Play: The Zero-Proxy Rule</strong>
+    <strong class="callout-title">The Operator Play: The Zero-Proxy Rule</strong>
     <ul>
       <li><strong>Ban proxy-only reviews:</strong> Every marketer, partnership lead, and business analyst must sit on two live, unscripted customer discovery calls, sales pitches, or churn debriefs every month. Unmediated.</li>
       <li><strong>Kill the synthesis deck:</strong> Stop letting researchers write 30-page summary PDFs. If enterprise customers are churning over a clunky contract workflow, play the raw 2-minute audio of the procurement director complaining directly to the team.</li>
@@ -270,25 +278,23 @@ GOOD (Raw Friction):
 
   <p>Look at how elite consumer brands operate: Red Bull doesn’t give field marketing leads a prescriptive 50-step playbook for regional events. They define the non-negotiable strategic boundary: <em>"Create organic, unforgettable cultural moments that embed Red Bull into extreme subcultures."</em> How local leads pull off stunts or curate festivals is 100% on them.</p>
 
-<pre><code>WEAK DIRECTIVE (Task-Driven):
-"Launch an email re-engagement campaign for churned accounts by Q3."
-└── Outcome: The team blasts a generic 3-part sequence; checks the box.
-
-HIGH-AGENCY DIRECTIVE (Friction-Driven):
-"We are losing $40k MRR every month from accounts churning after onboarding week 3. 
- Eliminate that drop-off. You own the budget, the messaging, the channel, and the approach."
-└── Outcome: The team diagnoses the actual bottleneck, discovers an onboarding gap, 
-             and fixes customer activation before sending a single email.</code></pre>
+  <div class="callout">
+    <strong class="callout-title">Task Directives vs. Friction Directives</strong>
+    <p><strong>Weak Directive (Task-Driven):</strong> <em>"Launch an email re-engagement campaign for churned accounts by Q3."</em><br>
+    <em>Outcome:</em> The team blasts a generic 3-part sequence; checks the box.</p>
+    <p><strong>High-Agency Directive (Friction-Driven):</strong> <em>"We are losing $40k MRR every month from accounts churning after onboarding week 3. Eliminate that drop-off. You own the budget, the messaging, the channel, and the approach."</em><br>
+    <em>Outcome:</em> The team diagnoses the actual bottleneck, discovers an onboarding gap, and fixes customer activation before sending a single email.</p>
+  </div>
 
   <div class="callout">
-    <strong>The Operator Play: The 1-Page Problem Contract</strong>
+    <strong class="callout-title">The Operator Play: The 1-Page Problem Contract</strong>
     <p>Before any initiative kicks off, ban the 20-slide proposal. The project lead must submit a 1-page Notion brief answering three questions:</p>
     <ol>
       <li>Who is the exact human being or external partner suffering today? (Name, title, account segment).</li>
       <li>What reality changes for them if this succeeds? (Hours saved, revenue unlocked, friction removed).</li>
       <li>What is our falsifiable hypothesis? (If we execute strategy X, metric Y moves by Z within 30 days).</li>
     </ol>
-    <em>Rule: If the brief describes internal slides or process instead of customer friction, reject it immediately.</em>
+    <p><em>Rule: If the brief describes internal slides or process instead of customer friction, reject it immediately.</em></p>
   </div>
 
   <h2>3. Replace Internal Deadlines with Public Commitment Devices</h2>
@@ -300,16 +306,16 @@ HIGH-AGENCY DIRECTIVE (Friction-Driven):
 
   <p>Look at Morning Star, the world's largest tomato processor. There are zero vertical managers. Every operator signs a Colleague Letter of Understanding (CLOU)—a public, written contract with their peers stating exactly what deliverables they are accountable for producing. The social contract does the heavy lifting.</p>
 
-<pre><code>THE OLD WAY (Private Accountability):
-Operator ─── "Can we push this launch two weeks?" ───► Manager
-[Result: Scope creep, zero social friction, chronic organizational drag]
-
-THE HIGH-AGENCY WAY (Public Proof of Work):
-Operator ─── "Here is the signed deal / live asset" ───► The Entire Company
-[Result: Social contract activates, focus sharpens, velocity spikes]</code></pre>
+  <div class="callout">
+    <strong class="callout-title">Private Accountability vs. Public Proof of Work</strong>
+    <p><strong>The Old Way (Private Accountability):</strong> Operator asks manager privately to push the launch two weeks.<br>
+    <em>Result:</em> Scope creep, zero social friction, chronic organizational drag.</p>
+    <p><strong>The High-Agency Way (Public Proof of Work):</strong> Operator presents the signed agreement or live deployed asset directly to the company.<br>
+    <em>Result:</em> Social contract activates, focus sharpens, velocity spikes.</p>
+  </div>
 
   <div class="callout">
-    <strong>The Operator Play: The Bi-Weekly "Proof of Work" Showcase</strong>
+    <strong class="callout-title">The Operator Play: The Bi-Weekly "Proof of Work" Showcase</strong>
     <p>Cancel recurring status meetings where people read bullets off a slide deck. Replace them with a recurring 45-minute company-wide <strong>"Proof of Work Showcase."</strong></p>
     <p><strong>The Ground Rules:</strong></p>
     <ul>
@@ -317,7 +323,7 @@ Operator ─── "Here is the signed deal / live asset" ───► The Entir
       <li>Only signed contracts, live ad campaigns, deployed landing pages, negotiated vendor rate reductions, or closed revenue can be shown.</li>
       <li>If it isn't deployed to market or legally executed, you do not present.</li>
     </ul>
-    <em>The social pressure of showing finished work to peers raises operational speed faster than any performance improvement plan ever could.</em>
+    <p><em>The social pressure of showing finished work to peers raises operational speed faster than any performance improvement plan ever could.</em></p>
   </div>
 
   <h2>4. Build Challenge Networks, Not Consensus Committees</h2>
@@ -331,18 +337,16 @@ Operator ─── "Here is the signed deal / live asset" ───► The Entir
 
   <p>In Bridgewater’s investment and operational arms, consensus is explicitly treated as a hazard. Junior operators are evaluated on their willingness to challenge senior partners' operational assumptions in open forums. If a proposal passes without disagreement, it is sent back for deeper stress-testing.</p>
 
-<pre><code>CONSENSUS COMMITTEE vs. CHALLENGE NETWORK
-
-Consensus Committee:
-Goal: Avoid conflict, get everyone to nod, dilute the idea until no one is offended.
-Result: Safe, mediocre campaigns that move zero needles.
-
-Challenge Network:
-Goal: Aggressively attack the thesis to find blind spots before reality does.
-Result: Battle-tested strategy, high conviction, massive upside.</code></pre>
+  <div class="callout">
+    <strong class="callout-title">Consensus Committee vs. Challenge Network</strong>
+    <p><strong>Consensus Committee:</strong> Avoid conflict, get everyone to nod, dilute the idea until no one is offended.<br>
+    <em>Result:</em> Safe, mediocre campaigns that move zero needles.</p>
+    <p><strong>Challenge Network:</strong> Aggressively attack the thesis to find blind spots before reality does.<br>
+    <em>Result:</em> Battle-tested strategy, high conviction, massive upside.</p>
+  </div>
 
   <div class="callout">
-    <strong>The Operator Play: The Pre-Launch "Red Team"</strong>
+    <strong class="callout-title">The Operator Play: The Pre-Launch "Red Team"</strong>
     <p>For any major GTM bet, pricing overhaul, or enterprise partnership, assign two peer operators outside the core team to act as the Red Team with a 48-hour window and a single prompt:</p>
     <blockquote>
       “Assume it is six months from today and this initiative has burned $250k or stalled out completely. Write a 1-page retro explaining the exact blind spot we ignored.”
@@ -351,23 +355,17 @@ Result: Battle-tested strategy, high conviction, massive upside.</code></pre>
   </div>
 
   <h2>The Monday Morning Audit</h2>
-  <p>Transitioning an organization from compliance to agency doesn't happen through an all-hands speech. It happens by changing the daily rituals of how decisions get made. Run this audit across your org next week:</p>
+  <p>Transitioning an organization from compliance to agency doesn't happen through an all-hands speech. It happens by changing the daily rituals of how decisions get made.</p>
 
-<pre><code>┌─────────────────────────────────────────────────────────────────────────────┐
-│                      THE HIGH-AGENCY TRANSITION AUDIT                       │
-├─────────────────────────────────────────────────────────────────────────────┤
-│  [ ] 1. Kill any recurring meeting where people read status updates off a   │
-│         slide deck or spreadsheet.                                          │
-│                                                                             │
-│  [ ] 2. Book 2 unmediated customer friction calls for every marketer,       │
-│         analyst, and operator on your team this month.                      │
-│                                                                             │
-│  [ ] 3. Replace your next weekly status sync with a live "Proof of Work"   │
-│         demo where only market-ready assets or signed deals can be shown.   │
-│                                                                             │
-│  [ ] 4. Stop assigning tactical checklists. Hand your leads a validated     │
-│         commercial bottleneck, clear boundaries, and get out of the way.    │
-└─────────────────────────────────────────────────────────────────────────────┘</code></pre>
+  <div class="callout">
+    <strong class="callout-title">The High-Agency Transition Audit</strong>
+    <ol>
+      <li>Kill any recurring meeting where people read status updates off a slide deck or spreadsheet.</li>
+      <li>Book 2 unmediated customer friction calls for every marketer, analyst, and operator on your team this month.</li>
+      <li>Replace your next weekly status sync with a live "Proof of Work" demo where only market-ready assets or signed deals can be shown.</li>
+      <li>Stop assigning tactical checklists. Hand your leads a validated commercial bottleneck, clear boundaries, and get out of the way.</li>
+    </ol>
+  </div>
 
   <p>When you look across elite business teams—whether they are high schoolers launching real projects at Wharton, venture-backed operators in San Francisco, or world-class GTM machines like Red Bull—the fundamental law of high performance remains unchanged:</p>
 
